@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #3C467B;
+}
+body{
+    height: 100vh;
+    max-width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    overflow-x: hidden;
+}
+.menuBar{
+    height: 100vh;
+    min-width: 18rem;
+    border-right: 0.14rem rgb(241, 237, 237) solid;
+    padding: 1rem 0.4rem;
+}
+.menuBar img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 3rem;
+    width: 150px;
+    height: 85px;
+}
+.ri-earth-fill{
+    font-size:2rem;
+    padding-left: 15px;
+}
+.ri-pencil-line, .ri-search-line, .ri-bar-chart-box-line{
+    font-size: 1.4rem;
+    color: #555555;
+}
+.menuBar ul{
+    list-style: none;
+    margin-top: 1.31rem;
+}
+.menuBar ul li{
+    display: flex;
+    place-items: center;
+    margin-bottom: .38rem;
+    border-radius: 0.4rem;
+    padding: 0.7rem;
+    cursor: pointer;
+    color: #262626;
+    transition: .15s linear;
+    gap: 5px;
+}
+.menuBar ul li:hover{
+    background-color: rgb(237, 237, 237);
+    font-weight: 500;
+}
+li.selected{
+    background-color: rgb(237, 237, 237);
+    font-weight: 500;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    position: relative;
+}
+.perfil{
+    padding: 0.2rem 1.6rem;
+    line-height: 4rem;
+    width: calc(100vw - 18rem);
+    display: flex;
+    justify-content: end;
+    
+}
+.perfil a{
+    text-decoration: none;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: .2s linear;
+}
+.perfil a:hover{
+    text-decoration: none;
+    color: #000000;
+    transform: translateY(-1.2px);
+}
+.ri-logout-box-line{
+    font-size: 1.5rem;
+    color: #1a1a1a;
+}
+.cards{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.cardContent{
+    padding: 2.8rem 1.8rem;
+    width: 20rem;
+    border: 0.14rem rgb(241, 237, 237) solid;
+}
+.cardContent h2{
+    margin-top: 0.7rem;
+}
+.topCard{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    place-items: center;
+}
+.topCard i{
+    font-size: 1.8rem;
+}
+.ri-inbox-archive-line{
+    color: rgb(170, 3, 3);
+}
+.ri-timer-flash-line{
+    color: orange;
+}
+.ri-bar-chart-box-line{
+    color: var(--main-color);
+}
+.ri-check-double-line{
+    color: rgb(44, 154, 44);
+}
+#content{
+    width: calc(95vw - 18rem);
+    border: 0.14rem rgb(241, 237, 237) solid;
+    margin: 2.5rem 0 0 2rem;
+    padding: 2rem;
+}
+#search{
+    font-size: .89rem;
+    color: #5b5a5a;
+    padding: 1.3rem 0 0.5rem 0;
+    width: 20rem;
+    border: none;
+    border-bottom: #a0a0a0 1px solid;
+    margin: 1.7rem 0;
+    transition: .15s linear;
+    outline: none;
+    display: flex;
+}
+.table{
+    max-height: 21rem;
+    max-width: 550px;
+    margin-top: 2rem;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.modelTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+.modelTable thead tr{
+    border: none;
+    border-bottom: 0.14rem rgb(241, 237, 237) solid;
+}
+.modelTable thead tr th{
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: start;
+    padding: 1rem;
+}
+.modelTable tbody tr td{
+    text-align: start;
+    padding: 1rem;
+    font-weight: 500;
+    border-bottom: 0.14rem rgb(241, 237, 237) solid;
+    cursor: pointer;
+}
+#qtdePecas{
+    text-align: end;
+}
+#number{
+    outline: none;
+    max-width: 50px;
+}
+#enviar{
+    width: 10rem;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .15s linear;
+    border: none;
+    white-space: nowrap;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    color: white;
+}
+#enviar:hover{
+    background-color: #1b1f36;
+}

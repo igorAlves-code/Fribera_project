@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #3C467B;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-color);
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    place-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    max-width: 28rem;
+    padding: 3.6rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 6rem rgba(0, 0, 0, 0.4);
+}
+form p{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    color: var(--main-color);
+}
+label{
+    width: 100%;
+    color: #777;
+    transition: 0.2s linear;
+    font-weight: 530;
+}
+label:focus-within{
+    color: var(--main-color);
+}
+input{
+    font-size: 1.18rem;
+    color: #404040;
+    padding: 1rem 0 0.5rem 0;
+    width: 100%;
+    border: none;
+    border-bottom: #a0a0a0 1px dotted;
+    margin-bottom: 3rem;
+    transition: 0.15 linear;
+    outline: none;
+}
+#enviar{
+    font-size: 0.81rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--main-color);
+    border: 0.8px solid currentColor;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: 0.25s;
+}
+#enviar:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
