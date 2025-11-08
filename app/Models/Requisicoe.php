@@ -18,6 +18,7 @@ class Requisicoe extends Model
         'status',
         'modelo',
         'voltagem',
+        'codigoMaquina',
         'descricao',
     ];
 

@@ -8,10 +8,13 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class AlmoxController extends Controller
 {
     public function almox(){
+
+        $user = Auth::user(); 
         $pecas = Peca::all();
         $qtde_50 = Peca::where('qtde', '<', 50)->get()->count();
         $pecaMaisPedida = DB::table('requisicao_pecas')
@@ -48,7 +51,16 @@ class AlmoxController extends Controller
             ->whereDate('data_requisicao', '<=', $hoje->toDateString())
             ->count();
         
-        return view('almox', ['pecas' => $pecas, 'qtde_50' => $qtde_50, 'nome' => $nomePeca, 'qtdeTotal' => $quantidadeTotal, 'percent' => $percentualAprovadas, 'monday' => $requisicoes]);
+        return view('almox', 
+        [
+            'pecas' => $pecas, 
+            'userName' => $user->nome, 
+            'qtde_50' => $qtde_50, 
+            'nome' => $nomePeca, 
+            'qtdeTotal' => $quantidadeTotal, 
+            'percent' => $percentualAprovadas, 
+            'monday' => $requisicoes
+        ]);
         
     }   
     public function update(Request $request){

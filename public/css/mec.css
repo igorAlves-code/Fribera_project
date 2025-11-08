@@ -73,7 +73,7 @@ li.selected{
     width: calc(100vw - 18rem);
     display: flex;
     justify-content: end;
-    
+    gap: 25px;
 }
 .perfil a{
     text-decoration: none;
@@ -82,6 +82,9 @@ li.selected{
     align-items: center;
     gap: 7px;
     transition: .2s linear;
+}
+.perfil p{
+    color: #1a1a1a;
 }
 .perfil a:hover{
     text-decoration: none;
@@ -232,6 +235,8 @@ li.selected{
     padding: 3.6rem 2rem;
     width: 20rem;
     border: 0.14rem rgb(241, 237, 237) solid;
+    text-decoration: none;
+    color: #000000;
 }
 .cardContent h2{
     margin-top: 0.7rem;
@@ -366,14 +371,23 @@ li.selected{
 }
 .btn-reset {
   background: white;
+  text-decoration: none;
   color: #666;
   border: 1px solid #d1d5db;
+}
+.details{
+    color: var(--main-color);
+    text-decoration: none;
+    transition: .2s linear;
+}
+.details:hover{
+    color: #1b1f36;
 }
 .btn-reset:hover {
   background: #f3f4f6;
   border-color: #9ca3af;
 }
-.status-pendente, .status-concluida, .status-rejeitada{
+.status-pendente, .status-aprovada, .status-rejeitada{
     text-align: center;
     padding: .7rem;
     border-radius: 12px;
@@ -385,7 +399,7 @@ li.selected{
     font-weight: bold;
 }
 
-.status-concluida {
+.status-aprovada {
     background-color: #d1e7dd; 
     color: #0f5132;          
     font-weight: bold;
@@ -395,6 +409,9 @@ li.selected{
     background-color: #f8d7da; 
     color: #842029;        
     font-weight: bold;
+}
+.model-label{
+    text-align: center;
 }
 
 

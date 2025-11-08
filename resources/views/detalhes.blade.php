@@ -134,8 +134,13 @@ a:hover {
         
     </table>
     <div class="detail-section">
+
+        <p class="detail-item">GESP: {{$reqs->first()->codigoMaquina}}</p>
         <p class="detail-item">Modelo: {{$reqs->first()->modelo}}</p>
         <p class="detail-item">Voltagem: {{$reqs->first()->voltagem}}</p>
+        <p></p>
+        <p class="detail-item">Descrição: {{$reqs->first()->descricao}}</p>
+
     </div>
     <a href="{{ route('mec') }}">Voltar</a>
 </body>
